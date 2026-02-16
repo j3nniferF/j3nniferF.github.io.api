@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jennifer Handel – Projects</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <article class="card shell">
+        <div class="card__inner">
+          <header class="header">
+            <div class="header__left">
+              <h1 class="name">Projects</h1>
+              <p class="kicker">Curated picks</p>
+            </div>
+
+            <nav class="nav" aria-label="Primary">
+              <a class="tab" href="index.html">Home</a>
+              <a class="tab" href="resume.html">Resume</a>
+              <a class="tab" href="projects.html" aria-current="page"
+                >Projects</a
+              >
+              <a class="tab" href="mailto:jennifer.f.handel@gmail.com">Email</a>
+              <a
+                class="tab"
+                href="https://www.linkedin.com/in/jenniferhandel"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                class="tab"
+                href="https://github.com/j3nniferF"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </nav>
+          </header>
+
+          <div class="divider"></div>
+
+          <section class="section">
+            <div class="grid">
+              <div class="panel">
+                <div class="link-row">
+                  <h3>DSIGDT — Daily Dashboard (Capstone in progress)</h3>
+                  <a
+                    class="btn-mini btn-mini--primary"
+                    href="https://github.com/j3nniferF/dsigdt-capstone"
+                    target="_blank"
+                    rel="noopener"
+                    >Repo</a
+                  >
+                </div>
+                <p class="meta">HTML • CSS • JavaScript • GitHub Pages</p>
+                <ul class="bullets">
+                  <li>
+                    Multi-page app with task tabs, timer tools, and localStorage
+                  </li>
+                  <li>
+                    Focus on readable UI, responsive layout, and consistent
+                    design
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel">
+                <div class="link-row">
+                  <h3>Bean Page</h3>
+                  <a
+                    class="btn-mini"
+                    href="https://github.com/j3nniferF/bean-page"
+                    target="_blank"
+                    rel="noopener"
+                    >Repo</a
+                  >
+                </div>
+                <p class="meta">Static site layout & styling practice</p>
+              </div>
+
+              <div class="panel">
+                <div class="link-row">
+                  <h3>PArrayground</h3>
+                  <a
+                    class="btn-mini"
+                    href="https://github.com/j3nniferF/PArrayground"
+                    target="_blank"
+                    rel="noopener"
+                    >Repo</a
+                  >
+                </div>
+                <p class="meta">JavaScript arrays and logic practice</p>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer">
+            <small>© <span id="year"></span> Jennifer Handel</small>
+          </footer>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jennifer Handel – Home</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <article class="card shell">
+        <div class="card__inner">
+          <header class="header">
+            <div class="header__left">
+              <h1 class="name">Jennifer Handel</h1>
+              <p class="kicker">Entry-level Web Development • Louisville, KY</p>
+
+              <div class="contact">
+                <a href="mailto:jennifer.f.handel@gmail.com"
+                  >jennifer.f.handel@gmail.com</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/jenniferhandel"
+                  target="_blank"
+                  rel="noopener"
+                  >linkedin.com/in/jenniferhandel</a
+                >
+                <a
+                  href="https://github.com/j3nniferF"
+                  target="_blank"
+                  rel="noopener"
+                  >github.com/j3nniferF</a
+                >
+              </div>
+            </div>
+
+            <nav class="nav" aria-label="Primary">
+              <a class="tab" href="index.html" aria-current="page">Home</a>
+              <a class="tab" href="resume.html">Resume</a>
+              <a class="tab" href="projects.html">Projects</a>
+              <a class="tab" href="mailto:jennifer.f.handel@gmail.com">Email</a>
+              <a
+                class="tab"
+                href="https://www.linkedin.com/in/jenniferhandel"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                class="tab"
+                href="https://github.com/j3nniferF"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </nav>
+          </header>
+
+          <div class="divider"></div>
+
+          <section class="section">
+            <h2 class="h2">About</h2>
+            <p class="p">
+              I’m a Code:You student building front-end projects with HTML, CSS,
+              and JavaScript. <br />
+              I care about clean layouts, readable UI, and shipping small
+              improvements consistently.
+            </p>
+          </section>
+
+          <section class="section">
+            <h2 class="h2">What I’m focused on right now</h2>
+
+            <div class="grid grid--3">
+              <div class="panel">
+                <h3>DSIGDT (Capstone — in progress)</h3>
+                <p class="meta">
+                  Tabs • tasks • timer • localStorage • multi-page
+                </p>
+                <ul class="bullets">
+                  <li>Responsive layout + page-to-page consistency</li>
+                  <li>
+                    UI that looks intentional (spacing, contrast, hierarchy)
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel">
+                <h3>UI + layout craft</h3>
+                <p class="meta">Flexbox • Grid • media queries</p>
+                <ul class="bullets">
+                  <li>Component-like patterns (cards, panels, buttons)</li>
+                  <li>Readable typography and alignment</li>
+                </ul>
+              </div>
+
+              <div class="panel">
+                <h3>Git discipline</h3>
+                <p class="meta">Small commits • clear messages</p>
+                <ul class="bullets">
+                  <li>Keeping projects easy to review and deploy</li>
+                  <li>Organized structure and tidy code</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="h2">Quick links</h2>
+            <ul class="bullets">
+              <li><a href="resume.html">Resume (and PDF)</a></li>
+              <li><a href="projects.html">Curated projects</a></li>
+              <li>
+                <a
+                  href="https://github.com/j3nniferF"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub profile</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/jenniferhandel"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <footer class="footer">
+            <small>© <span id="year"></span> Jennifer Handel</small>
+          </footer>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
