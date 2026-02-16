@@ -320,6 +320,89 @@ a {
 }
 
 /* =========
+   GitHub API projects (ON SCREEN)
+========= */
+.projects-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+@media (min-width: 880px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.project-title {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.project-desc {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project-pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.project-updated {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.project-link:hover {
+  border-color: var(--stroke2);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.projects-loading {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* =========
    Desktop
 ========= */
 @media (min-width: 880px) {
@@ -398,7 +481,8 @@ a {
 
   /* single column ALWAYS in print (prevents cramped/cut-off) */
   .grid--2,
-  .grid--3 {
+  .grid--3,
+  .projects-grid {
     grid-template-columns: 1fr !important;
   }
 
@@ -413,7 +497,8 @@ a {
   }
 
   /* Panels become normal blocks (no boxes = more space) */
-  .panel {
+  .panel,
+  .project-card {
     border: 0 !important;
     background: transparent !important;
     padding: 0 !important;
@@ -424,7 +509,9 @@ a {
   .btn-mini,
   .btn-mini--primary,
   .tab,
-  .tab--pdf {
+  .tab--pdf,
+  .project-link,
+  .project-pill {
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
@@ -465,7 +552,8 @@ a {
 
   /* Avoid “last line cut off” */
   .section,
-  .panel {
+  .panel,
+  .project-card {
     break-inside: avoid;
     page-break-inside: avoid;
   }
