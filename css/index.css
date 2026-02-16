@@ -320,18 +320,12 @@ a {
 }
 
 /* =========
-   GitHub API projects (ON SCREEN)
+   GitHub API projects (THIS MUST BE GLOBAL, NOT PRINT-ONLY)
 ========= */
 .projects-grid {
   display: grid;
   gap: 14px;
   margin-top: 12px;
-}
-
-@media (min-width: 880px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .project-card {
@@ -425,6 +419,10 @@ a {
   .grid--3 {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* =========
@@ -438,7 +436,7 @@ a {
   body {
     background: #fff !important;
     color: #111 !important;
-    font-size: 12.5pt !important; /* slightly bigger */
+    font-size: 12.5pt !important;
     line-height: 1.35 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -479,10 +477,9 @@ a {
     color: #111 !important;
   }
 
-  /* single column ALWAYS in print (prevents cramped/cut-off) */
+  /* single column ALWAYS in print */
   .grid--2,
-  .grid--3,
-  .projects-grid {
+  .grid--3 {
     grid-template-columns: 1fr !important;
   }
 
@@ -496,22 +493,19 @@ a {
     margin: 0 0 10pt !important;
   }
 
-  /* Panels become normal blocks (no boxes = more space) */
-  .panel,
-  .project-card {
+  /* Panels become normal blocks */
+  .panel {
     border: 0 !important;
     background: transparent !important;
     padding: 0 !important;
     margin: 0 0 10pt !important;
   }
 
-  /* IMPORTANT: kill the “pill/button” look in print */
+  /* kill the “pill/button” look in print */
   .btn-mini,
   .btn-mini--primary,
   .tab,
-  .tab--pdf,
-  .project-link,
-  .project-pill {
+  .tab--pdf {
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
@@ -520,7 +514,6 @@ a {
     font-weight: 700 !important;
   }
 
-  /* Links: underline, but don't print giant URLs */
   a {
     text-decoration: underline !important;
   }
@@ -528,7 +521,6 @@ a {
     content: "" !important;
   }
 
-  /* bullets tighter */
   .bullets {
     padding-left: 18pt !important;
     margin: 4pt 0 0 !important;
@@ -537,7 +529,6 @@ a {
     margin: 2.5pt 0 !important;
   }
 
-  /* tags become simple text */
   .tags {
     display: block !important;
   }
@@ -550,10 +541,8 @@ a {
     font-size: 11pt !important;
   }
 
-  /* Avoid “last line cut off” */
   .section,
-  .panel,
-  .project-card {
+  .panel {
     break-inside: avoid;
     page-break-inside: avoid;
   }
